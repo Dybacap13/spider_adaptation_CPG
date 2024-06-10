@@ -1,0 +1,4 @@
+bool need_check
+---
+bool result
+string result_str

@@ -1,0 +1,8 @@
+hexapod_msgs/MoveFeet legs
+int32 current_time
+bool need_adaptation
+---
+float64 reward_general
+float64 reward_odometry
+float64 reward_gyroscope
+string result

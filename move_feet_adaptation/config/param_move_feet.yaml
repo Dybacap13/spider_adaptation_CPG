@@ -1,0 +1,11 @@
+FEMUR_ANGLE: 0.5
+
+
+FEMUR_AXIS: [1, 1, 1, -1, -1, -1]
+COXA_AXIS: [1, 1, 1, -1, -1, -1]
+
+
+INTERPOLATION_COEFFICIENT: 0.7
+DELTA: 0.01
+
+

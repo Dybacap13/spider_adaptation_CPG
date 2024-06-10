@@ -1,0 +1,4 @@
+<launch>
+<rosparam command="load" file="$(find reinforcement_learning)/config/reinforcement_learning_param.yaml" />
+<node name="reinforcement_learning" pkg="reinforcement_learning" type="reinforcement_learning" />
+</launch>

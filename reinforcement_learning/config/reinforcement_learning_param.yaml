@@ -1,0 +1,38 @@
+NUMBER_NEURON: 6
+VOLTAGE_TRESHOLD: 2.0
+DELTA: 0.0001
+LEARNING_RATE: 0.1
+LEAK_RATE: 1.5
+TIME_ITERATION: 120.0
+ITERATION_SPIKE_IN: 400.0
+EPSILON_1: 90.0
+
+RANDOM_SEED_TEST_SNN: [1, 2, 3 ,4, 5, 6, 7]
+RANDOM_SEED_TEST_IN: [10, 10, 10 ,10, 10, 10 ,10 ]
+RANDOM_SEED_TEST_GYRO: [3, 7, 31 ,20,20,20,20 ]
+
+VOLTAGE_TRESHOLD_TEST: [2.0,2.0,2.0,2.0,2.0, 2.0, 2.0]
+LEAK_RATE_TEST: [1.5,1.5,1.5,1.5,1.5, 1.5, 1.5]
+ODOM_TEST: [2.0,1.5,1.7,2.0,1.4, 1.5, 3.5]
+
+NAME_FILE_REWARD: "/statistics/reward_learning_EPS_99_002.txt"
+NAME_FILE_LEGS: "/statistics/legs_learning_EPS_99_002.txt"
+NAME_FILE_VOLT: "/statistics/voltage_learning_EPS_99_002.txt"
+NAME_FILE_WEIGH: "/statistics/weight_learning_EPS_99_002.txt"
+NAME_FILE_RANDOM: "/statistics/random_learning_EPS_99_002.txt"
+
+#"/statistics/random_epsilon_experiment_RM__1_1NO_nnot_.txt"
+# NAME_FILE_REWARD: "/statistics/reward_experiment_.txt"
+# NAME_FILE_LEGS: "/statistics/legs_experiment_.txt"
+# NAME_FILE_VOLT: "/statistics/voltage_experiment_.txt"
+# NAME_FILE_WEIGH: "/statistics/weight_experiment_.txt"
+# NAME_FILE_RANDOM: "/statistics/random_with_random_seed_decreases_epsilon_experiment_RM_.txt"
+
+
+
+# NAME_FILE_Q: "/statistics/df_q_function_adaptation_LF_2"
+# NAME_FILE_QUANTITY: "/statistics/df_quantity_adaptation_LF_2"
+# NAME_FILE_REWARD_PY: "/statistics/df_reward_adaptation_LF_2"
+# NAME_FILE_CUMULATIVE_REWARD: "/statistics/df_cumulative_reward_adaptation_LF_2"
+
+

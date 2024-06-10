@@ -1,0 +1,5 @@
+int32 current_time
+int32 count_legs
+---
+float64 reward_odometry
+string result
