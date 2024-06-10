@@ -1,0 +1,30 @@
+<launch>
+
+
+<!-- Launch Gazebo with an empty world -->
+<include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="worlds/empty.world"/>
+    <arg name="paused" value="true"/>
+</include>
+
+<!-- Convert the xacro description into the parameter server -->
+<param name="robot_description" command="$(find xacro)/xacro --inorder $(find spider_description)/urdf/spider.xacro"/>
+
+
+<!-- Spawn the robot into Gazebo -->
+<node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model spider -z 1"/>
+
+
+<include file="$(find spider_control)/launch/spider_control.launch"/>
+
+<rosparam command="load" file="$(find spider_description)/params/spider.yaml" />
+<rosparam command="load" file="$(find spider_description)/params/dynamixel.yaml" />
+<rosparam command="load" file="$(find spider_description)/params/joystick_ds3.yaml" />
+<rosparam command="load" file="$(find move_feet)/config/param_move_feet.yaml" />
+<rosparam command="load" file="$(find reinforcement_learning)/config/reward.yaml" />
+<rosparam command="load" file="$(find reinforcement_learning)/config/reinforcement_learning_param.yaml" />
+
+
+</launch>
+
+

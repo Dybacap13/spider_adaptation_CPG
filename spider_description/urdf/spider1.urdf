@@ -1,0 +1,1401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="spider_description">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00053062 -0.00014671 -0.024203"
+        rpy="0 0 0" />
+      <mass
+        value="0.61161" />
+      <inertia
+        ixx="0.0045478"
+        ixy="-5.8546E-07"
+        ixz="5.8091E-06"
+        iyy="0.0078405"
+        iyz="1.6098E-06"
+        izz="0.012139" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_c1_lf">
+    <inertial>
+      <origin
+        xyz="0.026 -5.4857E-07 -0.023899"
+        rpy="0 0 0" />
+      <mass
+        value="0.020733" />
+      <inertia
+        ixx="7.1297E-06"
+        ixy="4.048E-11"
+        ixz="4.2078E-11"
+        iyy="7.0574E-06"
+        iyz="-7.4454E-15"
+        izz="7.0574E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_c1_lf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_c1_lf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_c1_lf"
+    type="revolute">
+    <origin
+      xyz="0.17005 0.11005 0"
+      rpy="0 0 0.7854" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_c1_lf" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="6.0"
+      velocity="0.524" />
+  </joint>
+  <link
+    name="link_thigh_lf">
+    <inertial>
+      <origin
+        xyz="0.041 -4.7333E-08 -0.024854"
+        rpy="0 0 0" />
+      <mass
+        value="0.095338" />
+      <inertia
+        ixx="1.5823E-05"
+        ixy="-7.1837E-09"
+        ixz="2.4429E-07"
+        iyy="9.7493E-05"
+        iyz="1.7728E-11"
+        izz="9.2466E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_thigh_lf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_thigh_lf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_thigh_lf"
+    type="revolute">
+    <origin
+      xyz="0.052 0.0239 -0.0239"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="link_c1_lf" />
+    <child
+      link="link_thigh_lf" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="6.0"
+      velocity="0.524" />
+  </joint>
+  <link
+    name="link_tibia_lf">
+    <inertial>
+      <origin
+        xyz="0.058213 4.8413E-07 -0.02399"
+        rpy="0 0 0" />
+      <mass
+        value="0.027469" />
+      <inertia
+        ixx="1.3791E-05"
+        ixy="-1.8639E-09"
+        ixz="2.7079E-09"
+        iyy="8.6758E-05"
+        iyz="1.5216E-13"
+        izz="7.8702E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_tibia_lf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_tibia_lf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_tibia_lf"
+    type="revolute">
+    <origin
+      xyz="0.082 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_thigh_lf" />
+    <child
+      link="link_tibia_lf" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="6.0"
+      velocity="0.524" />
+  </joint>
+  <transmission name="t_c1_lf">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j_c1_lf">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_c1_lf">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="t_thigh_lf">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j_thigh_lf">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_thigh_lf">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="t_tibia_lf">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j_tibia_lf">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_tibia_lf">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <gazebo reference="c1_lf">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="c2_lf">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="thigh_lf">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="tibia_lf">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <link
+    name="link_c1_rf">
+    <inertial>
+      <origin
+        xyz="0.0259999991636716 -5.48568285324569E-07 -0.0238994498902422"
+        rpy="0 0 0" />
+      <mass
+        value="0.0207333939617732" />
+      <inertia
+        ixx="7.12966880670212E-06"
+        ixy="4.04797875409359E-11"
+        ixz="4.2078214365996E-11"
+        iyy="7.05736504437159E-06"
+        iyz="-7.44539482746889E-15"
+        izz="7.05736451070848E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_c1_rf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_c1_rf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_c1_rf"
+    type="revolute">
+    <origin
+      xyz="0.17005 -0.11005 0"
+      rpy="0 0 -0.7854" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_c1_rf" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="6.0"
+      velocity="0.524" />
+  </joint>
+  <link
+    name="link_thigh_rf">
+    <inertial>
+      <origin
+        xyz="0.0409997696348333 -4.3056425345217E-08 -0.0231455246052306"
+        rpy="0 0 0" />
+      <mass
+        value="0.0953381260778559" />
+      <inertia
+        ixx="1.58226170665815E-05"
+        ixy="7.18370529304474E-09"
+        ixz="2.44292690517656E-07"
+        iyy="9.74932251034422E-05"
+        iyz="-1.77281106948335E-11"
+        izz="9.24662892922228E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_thigh_rf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_thigh_rf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_thigh_rf"
+    type="revolute">
+    <origin
+      xyz="0.052 0.0239 -0.0239"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="link_c1_rf" />
+    <child
+      link="link_thigh_rf" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="6.0"
+      velocity="0.524" />
+  </joint>
+  <link
+    name="link_tibia_rf">
+    <inertial>
+      <origin
+        xyz="0.0582130928710537 -4.84132053089198E-07 -0.024009755089485"
+        rpy="0 0 0" />
+      <mass
+        value="0.0274685501932794" />
+      <inertia
+        ixx="1.37907568518751E-05"
+        ixy="1.86386884762247E-09"
+        ixz="-2.70792447943625E-09"
+        iyy="8.67578889959421E-05"
+        iyz="1.52160813279096E-13"
+        izz="7.87024641434508E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_tibia_rf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_tibia_rf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_tibia_rf"
+    type="revolute">
+    <origin
+      xyz="0.082 0 -0.0002"
+      rpy="0 0 0" />
+    <parent
+      link="link_thigh_rf" />
+    <child
+      link="link_tibia_rf" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="6.0"
+      velocity="0.524" />
+  </joint>
+  <transmission name="t_c1_rf">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j_c1_rf">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_c1_rf">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="t_thigh_rf">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j_thigh_rf">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_thigh_rf">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="t_tibia_rf">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j_tibia_rf">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_tibia_rf">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <gazebo reference="c1_rf">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="c2_rf">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="thigh_rf">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="tibia_rf">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <link
+    name="link_c1_lm">
+    <inertial>
+      <origin
+        xyz="0.0259999991636717 -5.48568285352324E-07 -0.0238994498902422"
+        rpy="0 0 0" />
+      <mass
+        value="0.0207333939617732" />
+      <inertia
+        ixx="7.12966880670212E-06"
+        ixy="4.04797875473618E-11"
+        ixz="4.20782143633671E-11"
+        iyy="7.05736504437159E-06"
+        iyz="-7.44539705232163E-15"
+        izz="7.0573645107085E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_c1_lm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_c1_lm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_c1_lm"
+    type="revolute">
+    <origin
+      xyz="0 0.1325 0"
+      rpy="0 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_c1_lm" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="6.0"
+      velocity="0.524" />
+  </joint>
+  <link
+    name="link_thigh_lm">
+    <inertial>
+      <origin
+        xyz="0.0410002223045077 -4.73332562624107E-08 -0.0248544734829103"
+        rpy="0 0 0" />
+      <mass
+        value="0.095338126082866" />
+      <inertia
+        ixx="1.58226170677638E-05"
+        ixy="-7.18370555418024E-09"
+        ixz="2.44292690526641E-07"
+        iyy="9.74932251095805E-05"
+        iyz="1.77281110395446E-11"
+        izz="9.24662892972621E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_thigh_lm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_thigh_lm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_thigh_lm"
+    type="revolute">
+    <origin
+      xyz="0.052 0.0239 -0.0239"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="link_c1_lm" />
+    <child
+      link="link_thigh_lm" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="6.0"
+      velocity="0.524" />
+  </joint>
+  <link
+    name="link_tibia_lm">
+    <inertial>
+      <origin
+        xyz="0.0582130929481516 4.84132050920794E-07 -0.0239902443725242"
+        rpy="0 0 0" />
+      <mass
+        value="0.0274685503185618" />
+      <inertia
+        ixx="1.3790756868961E-05"
+        ixy="-1.86386884665518E-09"
+        ixz="2.70791984156504E-09"
+        iyy="8.67578890897643E-05"
+        iyz="1.52161124450007E-13"
+        izz="7.87024642322845E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_tibia_lm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_tibia_lm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_tibia_lm"
+    type="revolute">
+    <origin
+      xyz="0.082 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_thigh_lm" />
+    <child
+      link="link_tibia_lm" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="6.0"
+      velocity="0.524" />
+  </joint>
+  <transmission name="t_c1_lm">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j_c1_lm">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_c1_lm">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="t_thigh_lm">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j_thigh_lm">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_thigh_lm">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="t_tibia_lm">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j_tibia_lm">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_tibia_lm">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <gazebo reference="c1_lm">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="c2_lm">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="thigh_lm">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="tibia_lm">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <link
+    name="link_c1_rm">
+    <inertial>
+      <origin
+        xyz="0.0259999991636717 -5.48568285324569E-07 -0.0238994498902422"
+        rpy="0 0 0" />
+      <mass
+        value="0.0207333939617732" />
+      <inertia
+        ixx="7.12966880670213E-06"
+        ixy="4.04797875448088E-11"
+        ixz="4.20782143673133E-11"
+        iyy="7.0573650443716E-06"
+        iyz="-7.44539871417393E-15"
+        izz="7.05736451070851E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_c1_rm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_c1_rm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_c1_rm"
+    type="revolute">
+    <origin
+      xyz="0 -0.1325 0"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_c1_rm" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="6.0"
+      velocity="0.524" />
+  </joint>
+  <link
+    name="link_thigh_rm">
+    <inertial>
+      <origin
+        xyz="0.0409997696348329 -4.30564251890919E-08 -0.0231455246060158"
+        rpy="0 0 0" />
+      <mass
+        value="0.0953381260828659" />
+      <inertia
+        ixx="1.58226170677638E-05"
+        ixy="7.18370555416456E-09"
+        ixz="2.44292690526653E-07"
+        iyy="9.74932251095806E-05"
+        iyz="-1.77281110386843E-11"
+        izz="9.24662892972621E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_thigh_rm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_thigh_rm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_thigh_rm"
+    type="revolute">
+    <origin
+      xyz="0.052 0.0239 -0.0239"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="link_c1_rm" />
+    <child
+      link="link_thigh_rm" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="6.0"
+      velocity="0.524" />
+  </joint>
+  <link
+    name="link_tibia_rm">
+    <inertial>
+      <origin
+        xyz="0.0582130929481518 -4.84132050920794E-07 -0.0240097551133858"
+        rpy="0 0 0" />
+      <mass
+        value="0.0274685503185618" />
+      <inertia
+        ixx="1.3790756868961E-05"
+        ixy="1.86386884667144E-09"
+        ixz="-2.70791984154495E-09"
+        iyy="8.67578890897645E-05"
+        iyz="1.52161123538455E-13"
+        izz="7.87024642322847E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_tibia_rm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_tibia_rm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_tibia_rm"
+    type="revolute">
+    <origin
+      xyz="0.082 0 -0.0002"
+      rpy="0 0 0" />
+    <parent
+      link="link_thigh_rm" />
+    <child
+      link="link_tibia_rm" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="6.0"
+      velocity="0.524" />
+  </joint>
+  <transmission name="t_c1_rm">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j_c1_rm">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_c1_rm">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="t_thigh_rm">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j_thigh_rm">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_thigh_rm">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="t_tibia_rm">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j_tibia_rm">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_tibia_rm">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <gazebo reference="c1_rm">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="c2_rm">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="thigh_rm">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="tibia_rm">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <link
+    name="link_c1_lr">
+    <inertial>
+      <origin
+        xyz="0.0259999991636717 -5.48568285296813E-07 -0.0238994498902422"
+        rpy="0 0 0" />
+      <mass
+        value="0.0207333939617732" />
+      <inertia
+        ixx="7.12966880670214E-06"
+        ixy="4.04797875466534E-11"
+        ixz="4.20782143616838E-11"
+        iyy="7.0573650443716E-06"
+        iyz="-7.44539395058958E-15"
+        izz="7.0573645107085E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_c1_lr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_c1_lr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_c1_lr"
+    type="revolute">
+    <origin
+      xyz="-0.17005 0.11005 0"
+      rpy="0 0 2.3562" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_c1_lr" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="6.0"
+      velocity="0.524" />
+  </joint>
+  <link
+    name="link_thigh_lr">
+    <inertial>
+      <origin
+        xyz="0.0410002223045074 4.73332563630247E-08 -0.0229455244793161"
+        rpy="0 0 0" />
+      <mass
+        value="0.0953381260778558" />
+      <inertia
+        ixx="1.58226170665817E-05"
+        ixy="7.18370529304538E-09"
+        ixz="-2.44292690517702E-07"
+        iyy="9.74932251034422E-05"
+        iyz="1.77281106944824E-11"
+        izz="9.24662892922226E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_thigh_lr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_thigh_lr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_thigh_lr"
+    type="revolute">
+    <origin
+      xyz="0.052 0.0239 -0.0239"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="link_c1_lr" />
+    <child
+      link="link_thigh_lr" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="6.0"
+      velocity="0.524" />
+  </joint>
+  <link
+    name="link_tibia_lr">
+    <inertial>
+      <origin
+        xyz="0.0582130928710534 4.84132053134301E-07 -0.0239902443964251"
+        rpy="0 0 0" />
+      <mass
+        value="0.0274685501932786" />
+      <inertia
+        ixx="1.3790756851875E-05"
+        ixy="-1.8638688477235E-09"
+        ixz="2.70792447951079E-09"
+        iyy="8.67578889959413E-05"
+        iyz="1.52160801072195E-13"
+        izz="7.87024641434499E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_tibia_lr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_tibia_lr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_tibia_lr"
+    type="revolute">
+    <origin
+      xyz="0.082 0 0.0002"
+      rpy="0 0 0" />
+    <parent
+      link="link_thigh_lr" />
+    <child
+      link="link_tibia_lr" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="6.0"
+      velocity="0.524" />
+  </joint>
+  <transmission name="t_c1_lr">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j_c1_lr">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_c1_lr">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="t_thigh_lr">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j_thigh_lr">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_thigh_lr">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="t_tibia_lr">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j_tibia_lr">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_tibia_lr">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <gazebo reference="c1_lr">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="c2_lr">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="thigh_lr">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="tibia_lr">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo>
+    <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
+      <robotNamespace>/spider</robotNamespace>
+    </plugin>
+  </gazebo>
+  <link
+    name="link_c1_rr">
+    <inertial>
+      <origin
+        xyz="0.0259999997767144 -5.74651279682675E-07 -0.0238994522526252"
+        rpy="0 0 0" />
+      <mass
+        value="0.0207333939617732" />
+      <inertia
+        ixx="7.12966880670214E-06"
+        ixy="4.04797875481767E-11"
+        ixz="4.20782143628231E-11"
+        iyy="7.0573645107085E-06"
+        iyz="-7.44539760155159E-15"
+        izz="7.05736504437161E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_c1_rr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_c1_rr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_c1_rr"
+    type="revolute">
+    <origin
+      xyz="-0.17005 -0.11005 0"
+      rpy="0 0 -2.3562" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_c1_rr" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="6.0"
+      velocity="0.524" />
+  </joint>
+  <link
+    name="link_thigh_rr">
+    <inertial>
+      <origin
+        xyz="0.0409997696348332 4.30564253417476E-08 -0.0246544733577803"
+        rpy="0 0 0" />
+      <mass
+        value="0.0953381260778557" />
+      <inertia
+        ixx="1.58226170665815E-05"
+        ixy="-7.18370529304397E-09"
+        ixz="-2.4429269051773E-07"
+        iyy="9.7493225103442E-05"
+        iyz="-1.77281106923076E-11"
+        izz="9.24662892922226E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_thigh_rr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_thigh_rr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_thigh_rr"
+    type="revolute">
+    <origin
+      xyz="0.052 0.0239 -0.0239"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="link_c1_rr" />
+    <child
+      link="link_thigh_rr" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="6.0"
+      velocity="0.524" />
+  </joint>
+  <transmission name="t_c1_rr">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j_c1_rr">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_c1_rr">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="t_thigh_rr">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j_thigh_rr">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_thigh_rr">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="t_tibia_rr">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="j_tibia_rr">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_tibia_rr">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <gazebo reference="c1_rr">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="c2_rr">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="thigh_rr">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="tibia_rr">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <link
+    name="link_tibia_rr">
+    <inertial>
+      <origin
+        xyz="0.0582130928710512 -4.84132053127362E-07 -0.0240097550894846"
+        rpy="0 0 0" />
+      <mass
+        value="0.027468550193276" />
+      <inertia
+        ixx="1.37907568518746E-05"
+        ixy="1.86386884771011E-09"
+        ixz="-2.70792447954213E-09"
+        iyy="8.67578889959391E-05"
+        iyz="1.52160813778019E-13"
+        izz="7.87024641434475E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_tibia_rr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spider_description/meshes/link_tibia_rr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_tibia_rr"
+    type="revolute">
+    <origin
+      xyz="0.082 0 0.0004"
+      rpy="0 0 0" />
+    <parent
+      link="link_thigh_rr" />
+    <child
+      link="link_tibia_rr" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="6.0"
+      velocity="0.524" />
+  </joint>
+
+
+
+<gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_imu.so">
+      <!-- <robotNamespace></robotNamespace> -->
+      <topicName>/spider/gyroscope_data</topicName>
+      <serviceName>imu/service</serviceName>
+      <bodyName>base_link</bodyName>
+      <gaussianNoise>0</gaussianNoise>
+      <rpyOffsets>0 0 0</rpyOffsets>
+      <updateRate>30.0</updateRate>
+      <alwaysOn>true</alwaysOn>
+      <gaussianNoise>0</gaussianNoise>
+    </plugin>
+  </gazebo>
+
+
+    <gazebo reference="link_tibia_rr">
+      <mu1>100.0</mu1>
+      <mu2>100.0</mu2>
+
+    </gazebo>
+
+    <gazebo reference="link_tibia_rm">
+      <mu1>100.0</mu1>
+      <mu2>100.0</mu2>
+
+    </gazebo>
+
+
+    <gazebo reference="link_tibia_rf">
+      <mu1>100.0</mu1>
+      <mu2>100.0</mu2>
+ </gazebo>
+
+    <gazebo reference="link_tibia_lr">
+      <mu1>100.0</mu1>
+      <mu2>100.0</mu2>
+
+    </gazebo>
+    <gazebo reference="link_tibia_lm">
+      <mu1>100.0</mu1>
+      <mu2>100.0</mu2>
+
+    </gazebo>
+
+
+    <gazebo reference="link_tibia_lf">
+      <mu1>100.0</mu1>
+      <mu2>100.0</mu2>
+
+    </gazebo>
+</robot>

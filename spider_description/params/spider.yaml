@@ -1,0 +1,115 @@
+# Configuration Settings
+
+SIMULATION: "/joints_to_gazebo"
+
+# Non teleop mode for naviagtion stack, Gazebo, etc type modes.
+# Controller will still have standup and sitdown functions for safty reasons 
+NON_TELEOP: false
+
+# Speed limit in Hz for the master loop rate
+MASTER_LOOP_RATE: 500
+
+# Static time division to convert cmd_vel into segments for controller loop
+VELOCITY_DIVISION: 0.033
+
+# Twist Max Values
+# Currently these are set from a topic echo of the "twist" message coming out of the locomotion node.
+MAX_METERS_PER_SEC: 0.082
+MAX_RADIANS_PER_SEC: !degrees 17.629
+
+# Number of head segments
+# First segment would be yaw, second would be pitch
+NUMBER_OF_HEAD_SEGMENTS: 2
+
+# Number of Legs
+NUMBER_OF_LEGS: 6
+
+# Number of leg segments ( 3dof or 4dof )
+NUMBER_OF_LEG_SEGMENTS: 3
+
+
+#________________________________UPDATE_________________________________________________________________
+# Define Initial Coxa Offsets in Radians ['rr', 'rm', 'rf', 'lr', 'lm', 'lf']
+# IK is solved in local space currently, hence the reason right and left have same angle offsets.
+INIT_COXA_ANGLE: [!degrees -45, !degrees 0.0, !degrees 45, !degrees -45.0, !degrees 0.0, !degrees 45.0]
+
+#________________________________________________________________________________________________________
+
+
+
+#________________________________UPDATE_________________________________________________________________
+# Define distance in meters from coxa joint to the center ['rr', 'rm', 'rf', 'lr', 'lm', 'lf']
+# IK is solved in local space currently, hence the reason right and left have same distance values
+
+COXA_TO_CENTER_X: [-0.170, 0.0, 0.170, -0.170, 0.0, 0.170]
+COXA_TO_CENTER_Y: [0.110, 0.1325, 0.110, 0.110, 0.1325, 0.110]
+#________________________________________________________________________________________________________
+
+
+# Define Start Position Of Feet in meters from the coxa joint ['rr', 'rm', 'rf', 'lr', 'lm', 'lf']
+# Middle Legs is coxa axis to foot in meters
+# math to find positions of front and back legs POS_Y = Middle leg start position * cos(45 degrees) (0.707)
+# math to find positions of front and back legs POS_X = Middle leg start position * sin(45 degrees) (0.707)
+# IK is solved in local space currently, hence the reason right and left have same distance values
+#INIT_FOOT_POS_X: [-0.069, 0.0, 0.069, -0.069, 0.0, 0.069]
+#INIT_FOOT_POS_Y: [0.069, 0.049, 0.069, 0.069, 0.049, 0.069]
+
+INIT_FOOT_POS_X: [-0.086984092, 0.0, 0.086984092, -0.086984092, 0.0, 0.086984092]
+INIT_FOOT_POS_Y: [0.086984092, 0.123014083, 0.086984092, 0.086984092, 0.123014083, 0.086984092]
+INIT_FOOT_POS_Z: [0.05, 0.05, 0.05, 0.05, 0.05, 0.05]
+
+# Define Leg Measurements in meters
+COXA_LENGTH:   0.052
+FEMUR_LENGTH:  0.082
+TIBIA_LENGTH:  0.155
+TARSUS_LENGTH: 0.00
+
+# Body FK maximum rotation
+BODY_MAX_ROLL: !degrees 8
+BODY_MAX_PITCH: !degrees 8
+
+# Body Standing Height
+STANDING_BODY_HEIGHT: 0.06
+
+# Head FK maximum rotation
+HEAD_MAX_YAW: !degrees 55
+HEAD_MAX_PITCH: !degrees 25
+
+# Body auto levelling parameters
+MAX_BODY_ROLL_COMP: !degrees 12
+MAX_BODY_PITCH_COMP: !degrees 12
+COMPENSATE_INCREMENT: !degrees 0.01
+COMPENSATE_TO_WITHIN: !degrees 1
+
+# Gait Settings
+CYCLE_LENGTH: 50
+LEG_LIFT_HEIGHT: 0.05
+MAX_LIFT_HEIGHT: 0.050
+
+GAIT_STYLE: "TRIPOD"
+# Speed in Hz that the servos interpolate between gait poses
+INTERPOLATION_LOOP_RATE: 550
+
+# Servo descriptions
+SERVOS: {
+'01': {name: j_c1_rr, type: AX, id: 8, ticks: 1024, center: 512, max_radians: !degrees 300, sign: -1, offset: !degrees 0},
+'02': {name: j_thigh_rr, type: AX, id: 10, ticks: 1024, center: 512, max_radians: !degrees 300, sign: -1, offset: !degrees 14},
+'03': {name: j_tibia_rr, type: AX, id: 12, ticks: 1024, center: 512, max_radians: !degrees 300, sign: -1, offset: !degrees -48},
+'04': {name: j_c1_rm, type: AX, id: 14, ticks: 1024, center: 512, max_radians: !degrees 300, sign: -1, offset: !degrees 0},
+'05': {name: j_thigh_rm, type: AX, id: 16, ticks: 1024, center: 512, max_radians: !degrees 300, sign: -1, offset: !degrees 14},
+'06': {name: j_tibia_rm, type: AX, id: 18, ticks: 1024, center: 512, max_radians: !degrees 300, sign: -1, offset: !degrees -48},
+'07': {name: j_c1_rf, type: AX, id: 2, ticks: 1024, center: 512, max_radians: !degrees 300, sign: -1, offset: !degrees 0},
+'08': {name: j_thigh_rf, type: AX, id: 4, ticks: 1024, center: 512, max_radians: !degrees 300, sign: -1, offset: !degrees 14},
+'09': {name: j_tibia_rf, type: AX, id: 6, ticks: 1024, center: 512, max_radians: !degrees 300, sign: -1, offset: !degrees -48},
+'10': {name: j_c1_lr, type: AX, id: 7, ticks: 1024, center: 512, max_radians: !degrees 300, sign: 1, offset: !degrees 0},
+'11': {name: j_thigh_lr, type: AX, id: 9, ticks: 1024, center: 512, max_radians: !degrees 300, sign: 1, offset: !degrees 14},
+'12': {name: j_tibia_lr, type: AX, id: 11, ticks: 1024, center: 512, max_radians: !degrees 300, sign: 1, offset: !degrees -48},
+'13': {name: j_c1_lm, type: AX, id: 13, ticks: 1024, center: 512, max_radians: !degrees 300, sign: 1, offset: !degrees 0},
+'14': {name: j_thigh_lm, type: AX, id: 15, ticks: 1024, center: 512, max_radians: !degrees 300, sign: 1, offset: !degrees 14},
+'15': {name: j_tibia_lm, type: AX, id: 17, ticks: 1024, center: 512, max_radians: !degrees 300, sign: 1, offset: !degrees -48},
+'16': {name: j_c1_lf, type: AX, id: 19, ticks: 1024, center: 512, max_radians: !degrees 300, sign: 1, offset: !degrees 0},
+'17': {name: j_thigh_lf, type: AX, id: 3, ticks: 1024, center: 512, max_radians: !degrees 300, sign: 1, offset: !degrees 14},
+'18': {name: j_tibia_lf, type: AX, id: 5, ticks: 1024, center: 512, max_radians: !degrees 300, sign: 1, offset: !degrees -48},
+'19': {name: pan_joint, type: AX, id: 20, ticks: 1024, center: 512, max_radians: !degrees 300, sign: 1, offset: !degrees 0},
+'20': {name: tilt_joint, type: AX, id: 21, ticks: 1024, center: 512, max_radians: !degrees 300, sign: 1, offset: !degrees 0}
+}

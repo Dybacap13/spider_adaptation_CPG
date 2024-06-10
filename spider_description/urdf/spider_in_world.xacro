@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="spider_in_world">
+
+
+
+
+
+
+      <xacro:include filename="$(find spider_description)/urdf/spider.xacro" />
+
+      <xacro:include filename="$(find spider_description)/urdf/world.xacro" />
+
+
+
+
+</robot>
