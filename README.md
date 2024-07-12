@@ -6,8 +6,10 @@
 <a href=https://github.com/KevinOchs/hexapod_ros>Golem</a>
 
 ### Зависимости
-ubuntu 20.04 
-ros noetic
+
+     ubuntu 20.04 
+     ros noetic 
+
 
 ### Установка необходимых пакетов
-rosdep install --from-paths src --ignore-src -r -y
+`rosdep install --from-paths src --ignore-src -r -y`
