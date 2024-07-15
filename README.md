@@ -16,10 +16,41 @@
 
 ### Шаги по запуску 
 
-     1. roslaunch spider_gazebo srider_xacro.launch
-     2. rosrun hexapod_controller hexapod_controller_gazebo
-     3. rosrun hexapod_controller hexapod_controller
+* Необходимые ( думаю все в ланчи объединить, но пока так )
+  
+     1. `roslaunch spider_gazebo srider_xacro.launch`
+     2. `rosrun hexapod_controller hexapod_controller_gazebo`
+     3. `rosrun hexapod_controller hexapod_controller`
+     4. `rosrun reward_learning_gyro calculator_reward_gyro`
+     5. `rosrun reward_learning_odom calculator_reward_odom`
+        
+* Если нужно, чтоб робот просто походил
+  
+     1. Публикуем в топик  `/state(std_msgs/Bool)` - true
+     2. Публикуем в топик  `/cmd_vel(geometry_msgs/Twist)` - скорость
+        
+* Алгоритм обучения
+     1. `rosrun move_feet move_feet`
+     2. Включить симулятор ( там в газебо кнопка запуска)
+     3. Публикуем в топик  `/state(std_msgs/Bool)` - true
+     4. Публикуем в топик  `/move_feet/move_mode(std_msgs/Bool)` - true
+     5. `rosrun reinforcement_learning_shooter reinforcement_learning`
+        
+* Алгоритм адаптации
+      
+     1. `rosrun move_feet_adaptation move_feet_adaptation`
+     2. Включить симулятор ( там в газебо кнопка запуска)
+     3. Публикуем в топик  `/state(std_msgs/Bool)` - true
+     4. Публикуем в топик  `/move_feet/move_mode(std_msgs/Bool)` - true
+     5. `rosrun adaptation_algorithm adaptation_algorithm`
+        
+Для запуска других алгоритмов ( или их модификаций ) поменять пункт 5 на соответствующий:
 
+* `rosrun adaptation_multi_armed_bandit adaptation_multi_armed_bandit`
+* `rosrun multi_armed_bandit multi_armed_bandit`
+* `rosrun reinforcement_learning reinforcement_learning`
+
+     
 ### Описание пакетов (более подробную информацию см в пакете)
 
 **_hexapod_controller_**
