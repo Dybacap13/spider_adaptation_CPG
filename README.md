@@ -16,9 +16,9 @@
 
 ### Шаги по запуску 
 
-     1. `roslaunch spider_gazebo srider_xacro.launch` 
-     2. `rosrun hexapod_controller hexapod_controller_gazebo`
-     3. `rosrun hexapod_controller hexapod_controller` 
+     1. roslaunch spider_gazebo srider_xacro.launch
+     2. rosrun hexapod_controller hexapod_controller_gazebo
+     3. rosrun hexapod_controller hexapod_controller
 
 ### Описание пакетов (более подробную информацию см в пакете)
 
