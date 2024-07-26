@@ -50,6 +50,8 @@
 * `rosrun multi_armed_bandit multi_armed_bandit`
 * `rosrun reinforcement_learning reinforcement_learning`
 
+Чтобы оторвать одну из лап гексаподу читай README  в пакете `_spider_description_`
+
      
 ### Описание пакетов (более подробную информацию см в пакете)
 
